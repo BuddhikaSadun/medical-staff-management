@@ -1,0 +1,30 @@
+.register-title {
+  font-family: cursive;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.add-container {
+  background-color: rgb(110, 244, 244);
+  margin-bottom: 30%;
+
+  margin: 10%;
+  margin-top: 5%;
+  border-radius: 25px;
+  padding: 30px;
+}
+.container:hover {
+  opacity: 0.8;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+nav {
+  font-size: larger;
+  font-weight: 600;
+}
+.footer {
+  border: 2px bisque solid;
+}
