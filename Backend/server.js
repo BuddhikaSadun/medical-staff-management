@@ -16,6 +16,7 @@ const profileRoutes = require("./routes/profile");
 const salaryRoutes = require("./routes/salary");
 const leaveRoutes = require("./routes/leave");
 const userRoutes = require("./routes/user");
+const basicUser = require("./routes/basicAuth");
 
 app.use("/uploads", express.static("uploads"));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -26,8 +27,9 @@ app.use("/profile", profileRoutes);
 app.use("/salary", salaryRoutes);
 app.use("/leave", leaveRoutes);
 app.use("/user", userRoutes);
+app.use("/basicUser", basicUser);
 
-const port = 8000 || process.url;
+const port = 8000;
 
 const url =
   "mongodb+srv://buddhikaSadun:sadun123@clusterdemo.aqzosav.mongodb.net/hospital_db?retryWrites=true&w=majority";
