@@ -21,28 +21,18 @@ function Header() {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/test">
+                <a class="nav-link active" aria-current="page" href="/staff">
                   Home
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/add">
-                  add{" "}
+                <a class="nav-link" href="/salary">
+                  Salary
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/update/:id">
-                  update
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/login">
-                  login
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/register">
-                  Register
+                <a class="nav-link" href="/">
+                  Log out
                 </a>
               </li>
             </ul>

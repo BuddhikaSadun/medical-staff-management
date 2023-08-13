@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 import background from "../assests/images/hospital1.jpg";
 import "../assests/UpdateStaff.css";
-import Header from "./Header";
+import Header from "./StaffHeader";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";

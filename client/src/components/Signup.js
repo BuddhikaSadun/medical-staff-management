@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
 import "../assests/Signup.css";
-import Header from "./Header";
+import Header from "./StaffHeader";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -37,9 +38,15 @@ function Signup() {
       console.error(error);
       //console.log(error.response.data);
       //setError("Email Already used");
-      Swal.close({
-        title: `${error}`,
-        text: "Sorry can not save",
+
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        type: "error",
+        text: "Error in saving!",
+        position: "center",
+        showConfirmButton: false,
+        timer: 3000,
       });
     }
   };
@@ -51,13 +58,13 @@ function Signup() {
 
       <div className="signup-container">
         <form onSubmit={signupHandler}>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">
               Email address
             </label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               onChange={(event) => {
@@ -65,13 +72,13 @@ function Signup() {
               }}
             />
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">
               Password
             </label>
             <input
               type="password"
-              class="form-control"
+              className="form-control"
               id="exampleInputPassword1"
               onChange={(event) => {
                 setPassword(event.target.value);
@@ -79,23 +86,35 @@ function Signup() {
             />
           </div>
           <select
-            class="form-select form-select-lg mb-3"
+            className="form-select form-select-lg mb-3"
             aria-label="Large select example"
             value={position}
             onChange={(event) => {
               setPosition(event.target.value);
             }}
           >
-            <label>Login role</label>
-            <option>Select your Role</option>
+            <option value="">Select your Role</option>
             <option value="Staff">Staff</option>
             <option value="Admin">Admin</option>
           </select>
 
-          <button type="submit" class="btn btn-primary">
-            Submit
+          <button
+            type="submit"
+            className="btn btn-primary"
+            style={{
+              cursor: "pointer",
+              margin: "0% 0% 0% 50%",
+              // Adding cursor: "pointer" for the hover effect
+              // Additional styles for the hover effect can be added here
+              // For example: backgroundColor: "#0056b3"
+            }}
+          >
+            Signup
           </button>
         </form>
+        <p>
+          Already Signed up?<Link to="/">Log in </Link>
+        </p>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import logo from "../assests/images/logo.png";
 import axios from "axios";
-import Header from "./Header";
+import Header from "./StaffHeader";
 import background from "../assests/images/hospital1.jpg";
 import "../assests/Staff.css";
 
