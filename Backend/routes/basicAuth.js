@@ -8,7 +8,7 @@ router.post("/loginUser", async (req, res) => {
       email: req.body.email,
       password: req.body.password,
     })
-      .select("id email password position")
+      .select("id email password")
       .exec();
 
     if (docs.length === 0) {
@@ -19,12 +19,12 @@ router.post("/loginUser", async (req, res) => {
 
     const response = {
       count: docs.length,
+      id: docs.id,
       user: docs.map((doc) => {
         return {
           id: doc.id,
           email: doc.email,
           password: doc.password,
-          position: doc.position,
         };
       }),
     };
