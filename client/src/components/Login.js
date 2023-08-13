@@ -29,8 +29,8 @@ function Login() {
       setEmail("");
       setPassword("");
       //setAuth(response.data.user);
-      const uid = response.data.user[0].id;
-      console.log(response.data.user); // Log the user data
+      const uid = response.data;
+      console.log(response.data.data.user[0].id); // Log the user data
 
       Swal.fire({
         title: "Success",
